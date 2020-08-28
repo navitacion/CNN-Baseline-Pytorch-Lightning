@@ -1,0 +1,14 @@
+comet_ml:
+  api_key: LSTIie51umcysQtnef1Zzil6V
+  project_name: dogvscat
+data:
+  img_size: 128
+exp:
+  exp_name: test
+train:
+  batch_size: 32
+  epoch: 10
+  fold: 0
+  lr: 5.0e-05
+  model_name: efficientnet-b0
+  seed: 42

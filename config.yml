@@ -1,0 +1,21 @@
+hydra:
+  run:
+    dir: hydra_output/
+
+comet_ml:
+  api_key: LSTIie51umcysQtnef1Zzil6V
+  project_name: dogvscat
+
+exp:
+  exp_name: test
+
+data:
+  img_size: 128
+
+train:
+  batch_size: 32
+  epoch: 10
+  seed: 42
+  fold: 0
+  lr: 0.00005
+  model_name: efficientnet-b0

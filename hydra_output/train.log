@@ -1,0 +1,32 @@
+[2020-08-28 17:52:27,562][lightning][INFO] - GPU available: True, used: True
+[2020-08-28 17:52:27,562][lightning][INFO] - TPU available: False, using: 0 TPU cores
+[2020-08-28 17:52:27,563][lightning][INFO] - CUDA_VISIBLE_DEVICES: [0]
+[2020-08-28 17:52:38,331][lightning][INFO] - 
+  | Name      | Type              | Params
+------------------------------------------------
+0 | net       | ENet              | 4 M   
+1 | criterion | BCEWithLogitsLoss | 0     
+[2020-08-28 17:53:46,171][lightning][INFO] - GPU available: True, used: True
+[2020-08-28 17:53:46,173][lightning][INFO] - TPU available: False, using: 0 TPU cores
+[2020-08-28 17:53:46,174][lightning][INFO] - CUDA_VISIBLE_DEVICES: [0]
+[2020-08-28 17:53:50,343][lightning][INFO] - 
+  | Name      | Type              | Params
+------------------------------------------------
+0 | net       | ENet              | 4 M   
+1 | criterion | BCEWithLogitsLoss | 0     
+[2020-08-28 17:55:05,259][lightning][INFO] - GPU available: True, used: True
+[2020-08-28 17:55:05,262][lightning][INFO] - TPU available: False, using: 0 TPU cores
+[2020-08-28 17:55:05,263][lightning][INFO] - CUDA_VISIBLE_DEVICES: [0]
+[2020-08-28 17:55:10,367][lightning][INFO] - 
+  | Name      | Type              | Params
+------------------------------------------------
+0 | net       | ENet              | 4 M   
+1 | criterion | BCEWithLogitsLoss | 0     
+[2020-08-28 17:58:19,253][lightning][INFO] - GPU available: True, used: True
+[2020-08-28 17:58:19,254][lightning][INFO] - TPU available: False, using: 0 TPU cores
+[2020-08-28 17:58:19,255][lightning][INFO] - CUDA_VISIBLE_DEVICES: [0]
+[2020-08-28 17:58:23,450][lightning][INFO] - 
+  | Name      | Type              | Params
+------------------------------------------------
+0 | net       | ENet              | 4 M   
+1 | criterion | BCEWithLogitsLoss | 0     
