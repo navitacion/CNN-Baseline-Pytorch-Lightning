@@ -1,1 +1,4 @@
 input/
+*.pyc
+.idea/
+hydra_output/
