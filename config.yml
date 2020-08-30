@@ -3,8 +3,8 @@ hydra:
     dir: hydra_output/
 
 comet_ml:
-  api_key: LSTIie51umcysQtnef1Zzil6V
-  project_name: dogvscat
+  api_key: YOUR_API_KEY
+  project_name: YOUR_PROJECT_NAME
 
 exp:
   exp_name: test
