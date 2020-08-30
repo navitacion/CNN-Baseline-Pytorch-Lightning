@@ -5,9 +5,9 @@ import torch
 
 
 class ImageDataset(Dataset):
-    def __init__(self, df, img_paths, transform=None, phase='train'):
+    def __init__(self, df, data_dir, transform=None, phase='train'):
         self.df = df
-        self.img_paths = img_paths
+        self.data_dir = data_dir
         self.transform = transform
         self.phase = phase
 
@@ -17,7 +17,7 @@ class ImageDataset(Dataset):
     def __getitem__(self, idx):
         row = self.df.iloc[idx]
         img_id = row['image_id']
-        img_path = [path for path in self.img_paths if img_id in path][0]
+        img_path = os.path.join(self.data_dir, f'{img_id}.jpg')
         img = cv2.imread(img_path)
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 

@@ -13,8 +13,8 @@ data:
   img_size: 128
 
 train:
-  batch_size: 32
-  epoch: 10
+  batch_size: 64
+  epoch: 5
   seed: 42
   fold: 0
   lr: 0.00005

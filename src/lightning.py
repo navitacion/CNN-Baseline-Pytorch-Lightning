@@ -14,7 +14,6 @@ from pytorch_lightning.metrics.classification import AUROC
 
 
 class DataModule(pl.LightningDataModule):
-
     def __init__(self, data_dir, cfg, transform, cv):
         super(DataModule, self).__init__()
         self.cfg = cfg
@@ -25,8 +24,8 @@ class DataModule(pl.LightningDataModule):
 
     def prepare_data(self):
         # Prepare Data
-        self.train_img_path = glob.glob(os.path.join(self.data_dir, 'train', '*.jpg'))
-        self.test_img_path = glob.glob(os.path.join(self.data_dir, 'test', '*.jpg'))
+        self.train_dir = os.path.join(self.data_dir, 'train')
+        self.test_dir = os.path.join(self.data_dir, 'test')
         self.df = pd.read_csv(os.path.join(self.data_dir, 'train.csv'))
         self.test = pd.read_csv(os.path.join(self.data_dir, 'test.csv'))
 
@@ -40,10 +39,10 @@ class DataModule(pl.LightningDataModule):
         train = self.df[self.df['fold'] != fold].reset_index(drop=True)
         val = self.df[self.df['fold'] == fold].reset_index(drop=True)
 
-        self.train_dataset = ImageDataset(train, self.train_img_path, self.transform, phase='train')
-        self.val_dataset = ImageDataset(val, self.train_img_path, self.transform, phase='val')
-        self.test_dataset = ImageDataset(self.test, self.test_img_path, self.transform, phase='test')
-        self.oof_dataset = ImageDataset(self.df, self.train_img_path, self.transform, phase='test')
+        self.train_dataset = ImageDataset(train, self.train_dir, self.transform, phase='train')
+        self.val_dataset = ImageDataset(val, self.train_dir, self.transform, phase='val')
+        self.test_dataset = ImageDataset(self.test, self.test_dir, self.transform, phase='test')
+        self.oof_dataset = ImageDataset(self.df, self.train_dir, self.transform, phase='test')
 
     def train_dataloader(self):
         return DataLoader(self.train_dataset,
