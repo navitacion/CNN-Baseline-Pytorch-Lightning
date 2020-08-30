@@ -162,6 +162,5 @@ class LightningSystem(pl.LightningModule):
         N = len(glob.glob(f'submission_{self.cfg.exp.exp_name}*.csv'))
         filename = f'submission_{self.cfg.exp.exp_name}_{N}.csv'
         res.to_csv(filename, index=False)
-        self.experiment.log_asset(file_data=filename, file_name=filename)
 
         return {'res': res}
