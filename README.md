@@ -11,6 +11,8 @@ torch==1.6.0
 
 - input/フォルダを作成し、下記のようなフォルダ構成を想定
 
+サンプルデータは[こちら](https://www.kaggle.com/c/dogs-vs-cats-redux-kernels-edition)を使用
+
 ```bash
 input
 ├── test           # テストデータ
